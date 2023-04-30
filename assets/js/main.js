@@ -6,6 +6,21 @@
 
 (function($) {
 
+	function toggleDropdown() {
+		document.getElementById("myDropdown").classList.toggle("show");
+	}
+	window.onclick = function(event) {
+		if (!event.target.matches('.avatar')) {
+			var dropdowns = document.getElementsByClassName("dropdown");
+			for (var i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+				}
+			}
+		}
+	}
+
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper');

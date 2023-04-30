@@ -12,29 +12,37 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+        <script>
+            function toggleDropdown() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                window.onclick = function(event) {
+                    if (!event.target.matches('.avatar')) {
+                        var dropdowns = document.getElementsByClassName("myDropdown");
+                        for (var i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+        </script>
+    </head>
 	<body class="is-preload">
 
         <!-- Zero -->
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <style>
-                .avatar {
-                    float:left;
-                    margin: 2rem 0rem 0rem 1rem;
-                    width: 100%;
-                    max-width: 60px;
-                    height: auto;   
-                    border-radius: 50%;
-                    object-fit: cover;
-                }
-                .clear {
-                    clear:right;
-                }
-            </style>
-        </head>
+        
         <body>
-            <img class="avatar" src="images/profile-oswaldo_miguel.jpg" alt="Oswaldo's Face">
+            <div class="avatar-container">   
+                <img class="avatar" src="images/profile-oswaldo_miguel.jpg" alt="Oswaldo's Face" style="width: 60px; height: auto; border-radius: 50%; cursor: pointer;" onclick="toggleDropdown()">
+                <div id="myDropdown" class="myDropdown">
+                    <a href="https://www.linkedin.com/in/oswaldomiguel/">Connect with me in <i>that</i> social media</a>
+                    <a href="#first">Are you looking for my projects?</a>
+                    <a href="mailto:osmiguelth@gmail.com">Or do you want to talk?</a>
+                </div>
+            </div>
         </body>
 
 		<!-- Wrapper -->
@@ -102,33 +110,6 @@
 							<p>I'm not into keeping things on paper; the work I'm proud of is the one that is in the real world. Cutting things out of scope, adding new ones in when needed, sticking to the plan but also adapting as we go. That's what I like, and that's how being a designer makes sense for me.<blockquote>Constraint is the mother of inovation.</blockquote></p>
 						</div>
 
-				<!-- Seven -->
-					<section class="wrapper style1 align-center">
-						<div class="inner medium">
-							<h2>Get in touch</h2>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" value="" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" value="" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6"></textarea>
-									</div>
-								</div>
-								<ul class="actions special">
-									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-
-						</div>
-					</section>
-
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
@@ -136,7 +117,7 @@
 								<li><a href="https://www.linkedin.com/in/oswaldomiguel/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 								<li><a href="mailto:osmiguelth@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-							<p>&copy; Oswaldo Miguel's Portfolio. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							<p>&copy; Oswaldo Miguel's Portfolio. Design: <a href="https://html5up.net">HTML5 UP</a>, ChatGPT, and tutorials by lovely strangers on the internet.</p>
 						</div>
 					</footer>
 

@@ -8,6 +8,49 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+.avatar-container {
+	position: relative;
+	display: inline-block;
+}
+
+.avatar {   
+	position:relative;
+	display: inline-block;
+	margin: 2rem 0rem 0rem 1rem;
+	width: 100%;
+	max-width: 60px;
+	height: auto;   
+	border-radius: 50%;
+	object-fit: cover;
+	cursor: pointer;
+}
+
+.myDropdown {
+	position: absolute;
+	top: 1rem;
+	left: 4rem;
+	display: none;
+	background-color: #f1f1f1;
+	min-width: auto;
+	max-width: auto;
+	white-space: nowrap; /* Add this line to prevent text wrapping */
+  	overflow: hidden; /* Add this line to hide overflowing text */
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.myDropdown a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.myDropdown a:hover {
+	background-color: #ddd;
+}
+.show {
+	display: block;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
